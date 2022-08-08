@@ -1,13 +1,16 @@
-import React from "react";
+import React from "react"
 
-function Menubar() {
-    return (
-        <main>
-            <h3>Menubar</h3>
-
-        </main>
-
-    )
+function Menubar({ name, setName }) {
+  return (
+    <nav style={{ display: "flex", justifyContent: "space-between" }}>
+      <span>Menubar</span>
+      {name ? (
+        <button onClick={() => setName(null)}>Logout</button>
+      ) : (
+        <button onClick={() => setName("Mason")}>Login</button>
+      )}
+    </nav>
+  )
 }
 
-export default Menubar;
+export default Menubar

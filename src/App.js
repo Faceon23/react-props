@@ -1,18 +1,20 @@
-import { useState } from 'react';
-import Footer from './components/Footer';
-import Main from './components/Main'
-import Menubar from './components/Menubar';
-import './App.css';
+import React, { useState } from "react"
+import Footer from "./components/Footer"
+import Main from "./components/Main"
+import Coffee from "./components/Coffee"
+import Menubar from "./components/Menubar"
+import "./App.css"
 
 function App() {
-  const [name, setName] =useState('Zahra')
+  const [name, setName] = useState("Zahra")
   return (
     <>
-      <Menubar />
+      <Menubar name={name} setName={setName} />
       <Main name={name} />
+      <Coffee />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
